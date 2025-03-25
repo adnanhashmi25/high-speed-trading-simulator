@@ -1,0 +1,42 @@
+Project Title: High-Speed Trading Strategy Simulation
+Project Overview:
+This project implements a mean reversion and momentum-based trading strategy using real-time stock price simulations. The goal is to identify and act on market opportunities based on weekly price changes. The system automatically makes trading decisions, logs them in a database, and provides a performance summary.
+Role & Responsibilities:
+•	Developed a stock trading simulator to test the strategy under different market conditions.
+•	Implemented decision-making logic based on price movements: 
+o	If a stock drops 5% or more in a week → Buy.
+o	If a stock rises 10% or more in a week → Short.
+•	Stored trade data in a PostgreSQL database for tracking and analysis.
+•	Designed an Excel dashboard to visualize: 
+o	Current Holdings (Active positions in the market).
+o	Profit/Loss Summary based on the last closing statement.
+o	Capital Involvement (Total investment vs. available balance).
+
+Technologies Used:
+•	Programming Language: Python
+•	Database: PostgreSQL (Accessed via phpMyAdmin)
+•	Visualization: Excel (Pivot tables and charts for performance tracking)
+
+Challenges & Solutions:
+1️ Ensuring Data Accuracy in Simulated Trading
+•	Problem: Stock price data needed to be handled efficiently for correct decision-making.
+•	Solution: Implemented validation checks and stored every decision in the database to maintain data integrity.
+2️ Tracking Portfolio Performance
+•	Problem: Needed a way to quickly analyse past trades and current holdings.
+•	Solution: Created an Excel dashboard with automated formulas for real-time insights.
+3️ Managing Capital Involvement
+•	Problem: The system needed to track available capital and reinvestment opportunities.
+•	Solution: Introduced a capital_counter column in the database to monitor balance fluctuations.
+4 Efficient Capital Management
+•	Problem: Ensuring capital was properly tracked after each transaction.
+•	Solution: Introduced a capital counter that dynamically updates after each trade, maintaining accurate investment records.
+Impact & Outcomes:
+Automated Decision-Making → Eliminates manual trading execution and allows rapid decision tracking.
+Efficient Portfolio Monitoring → All trade data is logged, enabling analysis of market behavior. 
+Real-World Strategy Testing → Can be expanded to work with live market data for real-time trading.
+Optimized API Usage → Reduced API calls by 80%, improving efficiency.
+
+Future Enhancements:
+•	Integration with a live stock market API for real-time trading.
+•	Enhancing the strategy by adding more technical indicators (e.g., moving averages, RSI, MACD).
+•	Expanding database insights with additional analytics (e.g., win rate, average profit per trade).
